@@ -1,3 +1,1 @@
-usage: collect.py [-h] [--docket DOCKET] [--index-cap INDEX_CAP]
-                  [--text-sample TEXT_SAMPLE] [--budget BUDGET] [--out OUT]
-collect.py: error: argument --text-sample: invalid int value: ''
+REGULATIONS_API_KEY is not set. This collector calls a real API; it does not fabricate records.
