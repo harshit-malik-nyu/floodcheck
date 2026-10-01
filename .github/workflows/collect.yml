@@ -1,5 +1,8 @@
 name: collect
 on:
+  push:
+    branches: [main]
+    paths: ['.collect-trigger']
   workflow_dispatch:
     inputs:
       api_key:
@@ -27,7 +30,10 @@ jobs:
         with: { python-version: '3.12' }
       - name: Collect
         env:
-          REGULATIONS_API_KEY: ${{ inputs.api_key }}
+          # Either route works: paste the key when running manually, or store
+          # it once as a repository secret and every later run is automatic.
+          # It is never written into the repository by either path.
+          REGULATIONS_API_KEY: ${{ inputs.api_key || secrets.REGULATIONS_API_KEY }}
         run: |
           mkdir -p evidence
           python scripts/collect.py \
