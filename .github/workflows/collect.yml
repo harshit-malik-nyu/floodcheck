@@ -36,9 +36,12 @@ jobs:
           REGULATIONS_API_KEY: ${{ inputs.api_key || secrets.REGULATIONS_API_KEY }}
         run: |
           mkdir -p evidence
+          # Defaults inline. A push to .collect-trigger supplies no inputs at
+          # all, so every one of them arrives as an empty string — the first
+          # run died on `--text-sample ''` before making a single API call.
           python scripts/collect.py \
-            --docket "${{ inputs.docket }}" \
-            --text-sample "${{ inputs.text_sample }}" \
+            --docket "${{ inputs.docket || '' }}" \
+            --text-sample "${{ inputs.text_sample || '300' }}" \
             2>&1 | tee evidence/collect-run.txt
       - name: Summary
         if: always()
