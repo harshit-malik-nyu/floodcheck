@@ -28,6 +28,51 @@ the whole corpus", which nobody has, but:
 > What can be established about a docket from a sample an auditor can actually
 > afford to pull — and what cannot be, at any sample size?
 
+## The ceiling, before any detector exists
+
+A campaign is identifiable as a campaign because its members resemble each
+other. One member in a sample is just a comment — detection needs **at least
+two** of the same campaign to land in it. That gives a limit no detector can
+beat:
+
+> P(detect) = 1 − P(0 members) − P(exactly 1 member)
+
+A perfect detector that recognises coordination from any two members achieves
+exactly this. Every real detector does worse.
+
+### One hour of budget buys very different things
+
+1,000 requests. Metadata comes 250 to a request; comment text comes one.
+
+| Docket | Metadata sample | Finds campaigns down to | Text sample | Finds campaigns down to |
+|---|---:|---:|---:|---:|
+| FCC 17-108 (22.1M) | 250,000 | **419** (0.0019%) | 1,000 | **104,889** (0.47%) |
+| Large (1M) | 250,000 | 18 | 1,000 | 4,734 |
+| Mid (100k) | 100,000 | 2 | 1,000 | 472 |
+
+**A 250× gap between channels** — and text near-duplicate detection, which is
+what every published approach uses, is the worse one by two orders of
+magnitude. On the FCC docket it cannot see a campaign smaller than a hundred
+thousand comments.
+
+### Which campaigns are worth hiding
+
+On a one-million-comment docket, with a 1,000-comment text sample:
+
+| Campaign | Share | P(detected) | Sample needed for 95% |
+|---:|---:|---:|---:|
+| 500,000 | 50% | 100% | 8 |
+| 20,000 | 2% | 100% | 236 |
+| 5,000 | 0.5% | 96% | 947 |
+| **1,000** | **0.1%** | **26%** | **4,734** |
+| 200 | 0.02% | 1.7% | 23,497 |
+
+A flood that swamps a docket announces itself. **A campaign sized to be the
+largest bloc without being conspicuous is both more effective and essentially
+invisible to any audit an auditor can afford.** Finding a 1,000-comment
+campaign on a million-comment docket takes nearly five hours of continuous
+polling — for one docket.
+
 ## Status
 
 Reachability verified first, as in every project here. The findings:

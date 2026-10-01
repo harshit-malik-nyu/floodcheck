@@ -1,0 +1,123 @@
+{
+  "budget_one_hour": {
+    "requests": 1000,
+    "metadata_records": 250000,
+    "text_records": 1000
+  },
+  "floors": {
+    "FCC 17-108": {
+      "population": 22152242,
+      "budget": {
+        "requests": 1000,
+        "metadata_records": 250000,
+        "text_records": 1000
+      },
+      "confidence": 0.95,
+      "metadata": {
+        "sample": 250000,
+        "smallest_detectable_campaign": 419,
+        "as_share_of_docket": 1.8914564042772736e-05
+      },
+      "text": {
+        "sample": 1000,
+        "smallest_detectable_campaign": 104889,
+        "as_share_of_docket": 0.004734915770602362
+      }
+    },
+    "large": {
+      "population": 1000000,
+      "budget": {
+        "requests": 1000,
+        "metadata_records": 250000,
+        "text_records": 1000
+      },
+      "confidence": 0.95,
+      "metadata": {
+        "sample": 250000,
+        "smallest_detectable_campaign": 18,
+        "as_share_of_docket": 1.8e-05
+      },
+      "text": {
+        "sample": 1000,
+        "smallest_detectable_campaign": 4734,
+        "as_share_of_docket": 0.004734
+      }
+    },
+    "mid": {
+      "population": 100000,
+      "budget": {
+        "requests": 1000,
+        "metadata_records": 250000,
+        "text_records": 1000
+      },
+      "confidence": 0.95,
+      "metadata": {
+        "sample": 100000,
+        "smallest_detectable_campaign": 2,
+        "as_share_of_docket": 2e-05
+      },
+      "text": {
+        "sample": 1000,
+        "smallest_detectable_campaign": 472,
+        "as_share_of_docket": 0.00472
+      }
+    },
+    "small": {
+      "population": 10000,
+      "budget": {
+        "requests": 1000,
+        "metadata_records": 250000,
+        "text_records": 1000
+      },
+      "confidence": 0.95,
+      "metadata": {
+        "sample": 10000,
+        "smallest_detectable_campaign": 2,
+        "as_share_of_docket": 0.0002
+      },
+      "text": {
+        "sample": 1000,
+        "smallest_detectable_campaign": 46,
+        "as_share_of_docket": 0.0046
+      }
+    }
+  },
+  "campaigns": [
+    {
+      "size": 500000,
+      "share": 0.5,
+      "detect_at_1000": 1.0,
+      "sample_needed_95": 8
+    },
+    {
+      "size": 100000,
+      "share": 0.1,
+      "detect_at_1000": 1.0,
+      "sample_needed_95": 46
+    },
+    {
+      "size": 20000,
+      "share": 0.02,
+      "detect_at_1000": 0.9999999643017247,
+      "sample_needed_95": 236
+    },
+    {
+      "size": 5000,
+      "share": 0.005,
+      "detect_at_1000": 0.959976053773471,
+      "sample_needed_95": 947
+    },
+    {
+      "size": 1000,
+      "share": 0.001,
+      "detect_at_1000": 0.2642408710366073,
+      "sample_needed_95": 4734
+    },
+    {
+      "size": 200,
+      "share": 0.0002,
+      "detect_at_1000": 0.01744443158894249,
+      "sample_needed_95": 23497
+    }
+  ]
+}
