@@ -73,6 +73,53 @@ invisible to any audit an auditor can afford.** Finding a 1,000-comment
 campaign on a million-comment docket takes nearly five hours of continuous
 polling — for one docket.
 
+## Duplicate counting answers the wrong question
+
+Every published analysis of flooded dockets reports duplicate rates. The FCC
+docket was 17.4% unique. Those figures are real and are routinely read as
+evidence of fraud.
+
+**They are not. Coordination is legal and usually legitimate.** When an
+advocacy organisation sends an action alert and fifty thousand members submit
+the same template, that is fifty thousand real people exercising a real right,
+and the duplicate rate is 100%.
+
+What was wrong at the FCC was different: roughly 18 million comments **filed
+under the names of people who had not submitted them**, including the dead.
+The offence is misattribution, not repetition.
+
+So the question is not "are these identical" but **"does this bloc look like
+real people who agreed, or like records manufactured to look like people?"**
+Those produce the same duplicate rate and different metadata.
+
+### Three blocs, identical duplicate rates
+
+| Provenance | Flags raised, 5 seeds |
+|---|---|
+| **Membership** — a lawful advocacy campaign | 0, 0, 0, 0, 1 |
+| **Scripted** — records on a timer from a generated identity list | **3, 3, 3, 3, 3** |
+| **Careful** — a fabrication that paces irregularly, pauses overnight, and draws names from the full space | 0, 0, 0, 0, 1 |
+
+The naive adversary trips every signal: gaps too regular for human arrivals,
+names repeating faster than a real population, state distribution tracking
+census shares rather than a membership.
+
+**The careful one is indistinguishable from the lawful campaign** — and the
+false-positive rate on lawful campaigns equals the true-positive rate on
+careful ones. That is a negative result and it is pinned by a test, so a future
+change that appears to separate them has to explain itself.
+
+### What the two findings say together
+
+Sampling cannot reach small campaigns at any affordable budget. Metadata
+signals catch only careless adversaries.
+
+**The detectable cases are the ones that did not need detecting.** A
+22-million-comment flood announces itself. A campaign sized to be the largest
+bloc without being conspicuous, submitted at a human pace from a plausible
+name list, is invisible to both the sampling budget and the signals — and it is
+the one that would actually change what an agency concludes.
+
 ## Status
 
 Reachability verified first, as in every project here. The findings:

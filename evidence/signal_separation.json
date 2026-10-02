@@ -1,0 +1,631 @@
+[
+  {
+    "provenance": "membership",
+    "seed": 1,
+    "flags": [],
+    "n_flags": 0,
+    "reading": "Nothing in the metadata distinguishes this bloc from an ordinary coordinated campaign, which is lawful.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 1756.704260651629,
+        "cv": 3.855035339583757,
+        "verdict": "bursty",
+        "span_hours": 194.70138888888889
+      },
+      "hours": {
+        "n": 400,
+        "night_share": 0.0,
+        "verdict": "diurnal"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 335,
+        "singleton_share": 0.8238805970149253,
+        "most_common": {
+          "name": "matthew taylor",
+          "count": 4
+        },
+        "verdict": "varied"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 241,
+        "distinct_states": 15,
+        "divergence": 0.39764946779808835,
+        "noise_floor": 0.03734439834024896,
+        "ratio_to_noise": 10.64816908214881,
+        "verdict": "clustered like a membership"
+      }
+    }
+  },
+  {
+    "provenance": "membership",
+    "seed": 2,
+    "flags": [],
+    "n_flags": 0,
+    "reading": "Nothing in the metadata distinguishes this bloc from an ordinary coordinated campaign, which is lawful.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 1756.7593984962407,
+        "cv": 4.18375775891306,
+        "verdict": "bursty",
+        "span_hours": 194.7075
+      },
+      "hours": {
+        "n": 400,
+        "night_share": 0.0,
+        "verdict": "diurnal"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 314,
+        "singleton_share": 0.7579617834394905,
+        "most_common": {
+          "name": "nancy garcia",
+          "count": 3
+        },
+        "verdict": "varied"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 263,
+        "distinct_states": 15,
+        "divergence": 0.3849831752683322,
+        "noise_floor": 0.034220532319391636,
+        "ratio_to_noise": 11.25006389950793,
+        "verdict": "clustered like a membership"
+      }
+    }
+  },
+  {
+    "provenance": "membership",
+    "seed": 3,
+    "flags": [],
+    "n_flags": 0,
+    "reading": "Nothing in the metadata distinguishes this bloc from an ordinary coordinated campaign, which is lawful.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 1568.8320802005012,
+        "cv": 5.285695677327608,
+        "verdict": "bursty",
+        "span_hours": 173.8788888888889
+      },
+      "hours": {
+        "n": 400,
+        "night_share": 0.0,
+        "verdict": "diurnal"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 337,
+        "singleton_share": 0.8308605341246291,
+        "most_common": {
+          "name": "mary perez",
+          "count": 3
+        },
+        "verdict": "varied"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 236,
+        "distinct_states": 15,
+        "divergence": 0.3736241690589018,
+        "noise_floor": 0.038135593220338986,
+        "ratio_to_noise": 9.797255988655646,
+        "verdict": "clustered like a membership"
+      }
+    }
+  },
+  {
+    "provenance": "membership",
+    "seed": 4,
+    "flags": [],
+    "n_flags": 0,
+    "reading": "Nothing in the metadata distinguishes this bloc from an ordinary coordinated campaign, which is lawful.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 1620.65664160401,
+        "cv": 3.9198225120833374,
+        "verdict": "bursty",
+        "span_hours": 179.62277777777777
+      },
+      "hours": {
+        "n": 400,
+        "night_share": 0.0,
+        "verdict": "diurnal"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 319,
+        "singleton_share": 0.7774294670846394,
+        "most_common": {
+          "name": "robert smith",
+          "count": 3
+        },
+        "verdict": "varied"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 248,
+        "distinct_states": 15,
+        "divergence": 0.4929735672054323,
+        "noise_floor": 0.036290322580645164,
+        "ratio_to_noise": 13.58416051854969,
+        "verdict": "clustered like a membership"
+      }
+    }
+  },
+  {
+    "provenance": "membership",
+    "seed": 5,
+    "flags": [
+      "names repeat more than a real population would"
+    ],
+    "n_flags": 1,
+    "reading": "One signal is unusual. Weak on its own \u2014 ordinary campaigns produce odd-looking metadata often enough.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 2009.1954887218046,
+        "cv": 5.458307913824287,
+        "verdict": "bursty",
+        "span_hours": 222.68583333333333
+      },
+      "hours": {
+        "n": 400,
+        "night_share": 0.0,
+        "verdict": "diurnal"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 305,
+        "singleton_share": 0.7442622950819672,
+        "most_common": {
+          "name": "lisa williams",
+          "count": 4
+        },
+        "verdict": "repetitive"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 238,
+        "distinct_states": 15,
+        "divergence": 0.5431367216265564,
+        "noise_floor": 0.037815126050420166,
+        "ratio_to_noise": 14.362948860791159,
+        "verdict": "clustered like a membership"
+      }
+    }
+  },
+  {
+    "provenance": "scripted",
+    "seed": 1,
+    "flags": [
+      "submission gaps are too regular for human arrivals",
+      "names repeat more than a real population would",
+      "state distribution tracks census shares, not membership"
+    ],
+    "n_flags": 3,
+    "reading": "Several independent signals are inconsistent with an ordinary membership campaign. This warrants asking the organisation for its send logs. It does not establish fabrication.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 2.0025062656641603,
+        "cv": 0.13462319709161308,
+        "verdict": "machine-regular",
+        "span_hours": 0.22194444444444444
+      },
+      "hours": {
+        "n": 400,
+        "span_hours": 0.22194444444444444,
+        "night_share": null,
+        "verdict": "span under a day: no cycle to test"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 32,
+        "singleton_share": 0.0,
+        "most_common": {
+          "name": "james lewis",
+          "count": 24
+        },
+        "verdict": "repetitive"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 330,
+        "distinct_states": 15,
+        "divergence": 0.06500004289314072,
+        "noise_floor": 0.02727272727272727,
+        "ratio_to_noise": 2.3833349060818265,
+        "verdict": "matches population too closely"
+      }
+    }
+  },
+  {
+    "provenance": "scripted",
+    "seed": 2,
+    "flags": [
+      "submission gaps are too regular for human arrivals",
+      "names repeat more than a real population would",
+      "state distribution tracks census shares, not membership"
+    ],
+    "n_flags": 3,
+    "reading": "Several independent signals are inconsistent with an ordinary membership campaign. This warrants asking the organisation for its send logs. It does not establish fabrication.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 2.007518796992481,
+        "cv": 0.14748503795877516,
+        "verdict": "machine-regular",
+        "span_hours": 0.2225
+      },
+      "hours": {
+        "n": 400,
+        "span_hours": 0.2225,
+        "night_share": null,
+        "verdict": "span under a day: no cycle to test"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 33,
+        "singleton_share": 0.0,
+        "most_common": {
+          "name": "thomas taylor",
+          "count": 22
+        },
+        "verdict": "repetitive"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 332,
+        "distinct_states": 15,
+        "divergence": 0.012148627318586645,
+        "noise_floor": 0.02710843373493976,
+        "ratio_to_noise": 0.4481493633078629,
+        "verdict": "matches population too closely"
+      }
+    }
+  },
+  {
+    "provenance": "scripted",
+    "seed": 3,
+    "flags": [
+      "submission gaps are too regular for human arrivals",
+      "names repeat more than a real population would",
+      "state distribution tracks census shares, not membership"
+    ],
+    "n_flags": 3,
+    "reading": "Several independent signals are inconsistent with an ordinary membership campaign. This warrants asking the organisation for its send logs. It does not establish fabrication.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 2.0,
+        "cv": 0.1805033341356475,
+        "verdict": "machine-regular",
+        "span_hours": 0.22166666666666668
+      },
+      "hours": {
+        "n": 400,
+        "span_hours": 0.22166666666666668,
+        "night_share": null,
+        "verdict": "span under a day: no cycle to test"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 32,
+        "singleton_share": 0.0,
+        "most_common": {
+          "name": "barbara robinson",
+          "count": 20
+        },
+        "verdict": "repetitive"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 329,
+        "distinct_states": 15,
+        "divergence": 0.049660491470851546,
+        "noise_floor": 0.02735562310030395,
+        "ratio_to_noise": 1.8153668548789066,
+        "verdict": "matches population too closely"
+      }
+    }
+  },
+  {
+    "provenance": "scripted",
+    "seed": 4,
+    "flags": [
+      "submission gaps are too regular for human arrivals",
+      "names repeat more than a real population would",
+      "state distribution tracks census shares, not membership"
+    ],
+    "n_flags": 3,
+    "reading": "Several independent signals are inconsistent with an ordinary membership campaign. This warrants asking the organisation for its send logs. It does not establish fabrication.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 2.0,
+        "cv": 0.1276351315940976,
+        "verdict": "machine-regular",
+        "span_hours": 0.22166666666666668
+      },
+      "hours": {
+        "n": 400,
+        "span_hours": 0.22166666666666668,
+        "night_share": null,
+        "verdict": "span under a day: no cycle to test"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 32,
+        "singleton_share": 0.0,
+        "most_common": {
+          "name": "barbara rodriguez",
+          "count": 25
+        },
+        "verdict": "repetitive"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 327,
+        "distinct_states": 15,
+        "divergence": 0.034278522711703834,
+        "noise_floor": 0.027522935779816515,
+        "ratio_to_noise": 1.2454529918585726,
+        "verdict": "matches population too closely"
+      }
+    }
+  },
+  {
+    "provenance": "scripted",
+    "seed": 5,
+    "flags": [
+      "submission gaps are too regular for human arrivals",
+      "names repeat more than a real population would",
+      "state distribution tracks census shares, not membership"
+    ],
+    "n_flags": 3,
+    "reading": "Several independent signals are inconsistent with an ordinary membership campaign. This warrants asking the organisation for its send logs. It does not establish fabrication.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 1.9899749373433584,
+        "cv": 0.14222261172285242,
+        "verdict": "machine-regular",
+        "span_hours": 0.22055555555555556
+      },
+      "hours": {
+        "n": 400,
+        "span_hours": 0.22055555555555556,
+        "night_share": null,
+        "verdict": "span under a day: no cycle to test"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 33,
+        "singleton_share": 0.0,
+        "most_common": {
+          "name": "karen anderson",
+          "count": 21
+        },
+        "verdict": "repetitive"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 324,
+        "distinct_states": 15,
+        "divergence": 0.0177634843554789,
+        "noise_floor": 0.027777777777777776,
+        "ratio_to_noise": 0.6394854367972405,
+        "verdict": "matches population too closely"
+      }
+    }
+  },
+  {
+    "provenance": "careful",
+    "seed": 1,
+    "flags": [],
+    "n_flags": 0,
+    "reading": "Nothing in the metadata distinguishes this bloc from an ordinary coordinated campaign, which is lawful.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 1756.704260651629,
+        "cv": 3.855035339583757,
+        "verdict": "bursty",
+        "span_hours": 194.70138888888889
+      },
+      "hours": {
+        "n": 400,
+        "night_share": 0.0,
+        "verdict": "diurnal"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 335,
+        "singleton_share": 0.8238805970149253,
+        "most_common": {
+          "name": "matthew taylor",
+          "count": 4
+        },
+        "verdict": "varied"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 241,
+        "distinct_states": 15,
+        "divergence": 0.39764946779808835,
+        "noise_floor": 0.03734439834024896,
+        "ratio_to_noise": 10.64816908214881,
+        "verdict": "clustered like a membership"
+      }
+    }
+  },
+  {
+    "provenance": "careful",
+    "seed": 2,
+    "flags": [],
+    "n_flags": 0,
+    "reading": "Nothing in the metadata distinguishes this bloc from an ordinary coordinated campaign, which is lawful.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 1756.7593984962407,
+        "cv": 4.18375775891306,
+        "verdict": "bursty",
+        "span_hours": 194.7075
+      },
+      "hours": {
+        "n": 400,
+        "night_share": 0.0,
+        "verdict": "diurnal"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 314,
+        "singleton_share": 0.7579617834394905,
+        "most_common": {
+          "name": "nancy garcia",
+          "count": 3
+        },
+        "verdict": "varied"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 263,
+        "distinct_states": 15,
+        "divergence": 0.3849831752683322,
+        "noise_floor": 0.034220532319391636,
+        "ratio_to_noise": 11.25006389950793,
+        "verdict": "clustered like a membership"
+      }
+    }
+  },
+  {
+    "provenance": "careful",
+    "seed": 3,
+    "flags": [],
+    "n_flags": 0,
+    "reading": "Nothing in the metadata distinguishes this bloc from an ordinary coordinated campaign, which is lawful.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 1568.8320802005012,
+        "cv": 5.285695677327608,
+        "verdict": "bursty",
+        "span_hours": 173.8788888888889
+      },
+      "hours": {
+        "n": 400,
+        "night_share": 0.0,
+        "verdict": "diurnal"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 337,
+        "singleton_share": 0.8308605341246291,
+        "most_common": {
+          "name": "mary perez",
+          "count": 3
+        },
+        "verdict": "varied"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 236,
+        "distinct_states": 15,
+        "divergence": 0.3736241690589018,
+        "noise_floor": 0.038135593220338986,
+        "ratio_to_noise": 9.797255988655646,
+        "verdict": "clustered like a membership"
+      }
+    }
+  },
+  {
+    "provenance": "careful",
+    "seed": 4,
+    "flags": [],
+    "n_flags": 0,
+    "reading": "Nothing in the metadata distinguishes this bloc from an ordinary coordinated campaign, which is lawful.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 1620.65664160401,
+        "cv": 3.9198225120833374,
+        "verdict": "bursty",
+        "span_hours": 179.62277777777777
+      },
+      "hours": {
+        "n": 400,
+        "night_share": 0.0,
+        "verdict": "diurnal"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 319,
+        "singleton_share": 0.7774294670846394,
+        "most_common": {
+          "name": "robert smith",
+          "count": 3
+        },
+        "verdict": "varied"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 248,
+        "distinct_states": 15,
+        "divergence": 0.4929735672054323,
+        "noise_floor": 0.036290322580645164,
+        "ratio_to_noise": 13.58416051854969,
+        "verdict": "clustered like a membership"
+      }
+    }
+  },
+  {
+    "provenance": "careful",
+    "seed": 5,
+    "flags": [
+      "names repeat more than a real population would"
+    ],
+    "n_flags": 1,
+    "reading": "One signal is unusual. Weak on its own \u2014 ordinary campaigns produce odd-looking metadata often enough.",
+    "detail": {
+      "timing": {
+        "n": 400,
+        "mean_gap_s": 2009.1954887218046,
+        "cv": 5.458307913824287,
+        "verdict": "bursty",
+        "span_hours": 222.68583333333333
+      },
+      "hours": {
+        "n": 400,
+        "night_share": 0.0,
+        "verdict": "diurnal"
+      },
+      "names": {
+        "n": 400,
+        "distinct": 305,
+        "singleton_share": 0.7442622950819672,
+        "most_common": {
+          "name": "lisa williams",
+          "count": 4
+        },
+        "verdict": "repetitive"
+      },
+      "geography": {
+        "n": 400,
+        "in_reference_states": 238,
+        "distinct_states": 15,
+        "divergence": 0.5431367216265564,
+        "noise_floor": 0.037815126050420166,
+        "ratio_to_noise": 14.362948860791159,
+        "verdict": "clustered like a membership"
+      }
+    }
+  }
+]
