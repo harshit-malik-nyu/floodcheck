@@ -14,8 +14,8 @@ import argparse
 import json
 import sys
 
-from .economics import Prices, asymmetry, crossover
-from .sampling import Budget, detect_probability, detection_floor, sample_needed
+from .economics import asymmetry, crossover
+from .sampling import Budget, detection_floor
 from .signals import assess
 from .synthetic import GENERATORS
 
