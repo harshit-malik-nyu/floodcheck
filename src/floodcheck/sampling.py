@@ -154,22 +154,51 @@ class Budget:
                 "text_records": self.text_records()}
 
 
+# Which signals each endpoint actually supports.
+#
+# This distinction was missing from the first version and it weakens the
+# headline. The index endpoint returns 250 records per request but carries
+# only a title, a date and an agency. Submitter name, city and state come
+# from the PER-COMMENT endpoint, which costs one request each — exactly like
+# the comment body.
+#
+# So the 250x advantage applies to duplicate-title and timing analysis, and
+# not to the name and geography signals that do most of the separating in
+# signals.py. Stating "metadata is 250x cheaper" without that split
+# overstates what the cheap channel can do.
+CHANNELS = {
+    "index": {
+        "records_per_request": 250,
+        "supports": ("duplicate titles", "submission timing"),
+    },
+    "detail": {
+        "records_per_request": 1,
+        "supports": ("submitter name", "city and state", "organisation",
+                     "duplicate count reported by the API"),
+    },
+    "text": {
+        "records_per_request": 1,
+        "supports": ("near-duplicate comment body", "paraphrase clustering"),
+    },
+}
+
+
 def detection_floor(population: int, budget: Budget,
                     confidence: float = 0.95) -> dict:
     """
-    The smallest campaign a budget can be expected to find, in both channels.
+    The smallest campaign a budget can be expected to find, per channel.
 
-    Metadata is 250x cheaper per record, so it reaches far smaller campaigns —
-    but only for signals visible in metadata (duplicate titles, submission
-    timing, organisation concentration). Near-duplicate TEXT detection is
-    limited to the text sample, which is the expensive channel and the one
-    every published approach assumes it has.
+    Three channels, not two, because the cheap one is cheaper than the
+    expensive ones AND carries less. The index gives titles and timestamps at
+    250 per request; names, geography and comment bodies all cost one request
+    each and therefore share the same ceiling.
     """
     out = {"population": population, "budget": budget.as_dict(),
            "confidence": confidence}
 
-    for channel, n in (("metadata", min(budget.metadata_records(), population)),
-                       ("text", min(budget.text_records(), population))):
+    per_request = {"index": 250, "detail": 1, "text": 1}
+    for channel, rpr in per_request.items():
+        n = min(budget.requests * rpr, population)
         lo, hi = 1, population
         best = None
         while lo <= hi:
@@ -182,9 +211,13 @@ def detection_floor(population: int, budget: Budget,
                 lo = mid + 1
         out[channel] = {
             "sample": n,
+            "records_per_request": rpr,
+            "supports": list(CHANNELS[channel]["supports"]),
             "smallest_detectable_campaign": best,
             "as_share_of_docket": (best / population) if best else None,
         }
+    # Kept so existing callers and committed evidence still resolve.
+    out["metadata"] = out["index"]
     return out
 
 

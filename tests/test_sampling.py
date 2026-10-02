@@ -136,3 +136,43 @@ class TestTable:
         rows = table([10_000, 1_000_000], [0.01, 0.1], 1000)
         assert len(rows) == 4
         assert all("detect_probability" in r for r in rows)
+
+
+class TestChannelsAreHonest:
+    """
+    The first version reported two channels, 'metadata' and 'text', and let
+    'metadata is 250x cheaper' stand for every non-text signal. It is not:
+    names and geography come from the per-comment endpoint and cost the same
+    as the comment body.
+    """
+
+    def test_three_channels_not_two(self):
+        from floodcheck.sampling import CHANNELS
+        assert set(CHANNELS) == {"index", "detail", "text"}
+
+    def test_only_the_index_is_cheap(self):
+        from floodcheck.sampling import CHANNELS
+        assert CHANNELS["index"]["records_per_request"] == 250
+        assert CHANNELS["detail"]["records_per_request"] == 1
+        assert CHANNELS["text"]["records_per_request"] == 1
+
+    def test_name_and_geography_are_not_in_the_cheap_channel(self):
+        """
+        The signals doing most of the separating in signals.py are not
+        available at 250 records per request, and the README must not imply
+        they are.
+        """
+        from floodcheck.sampling import CHANNELS
+        cheap = " ".join(CHANNELS["index"]["supports"]).lower()
+        assert "name" not in cheap
+        assert "city" not in cheap and "state" not in cheap
+
+    def test_detail_and_text_share_a_ceiling(self):
+        f = detection_floor(1_000_000, Budget(hours=1.0))
+        assert (f["detail"]["smallest_detectable_campaign"]
+                == f["text"]["smallest_detectable_campaign"])
+
+    def test_the_old_key_still_resolves(self):
+        """Committed evidence and earlier callers must not silently break."""
+        f = detection_floor(1_000_000, Budget(hours=1.0))
+        assert f["metadata"] == f["index"]

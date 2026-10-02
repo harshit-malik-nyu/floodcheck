@@ -44,16 +44,25 @@ exactly this. Every real detector does worse.
 
 1,000 requests. Metadata comes 250 to a request; comment text comes one.
 
-| Docket | Metadata sample | Finds campaigns down to | Text sample | Finds campaigns down to |
-|---|---:|---:|---:|---:|
-| FCC 17-108 (22.1M) | 250,000 | **419** (0.0019%) | 1,000 | **104,889** (0.47%) |
-| Large (1M) | 250,000 | 18 | 1,000 | 4,734 |
-| Mid (100k) | 100,000 | 2 | 1,000 | 472 |
+There are **three** channels, not two, and the cheap one carries less:
 
-**A 250× gap between channels** — and text near-duplicate detection, which is
-what every published approach uses, is the worse one by two orders of
-magnitude. On the FCC docket it cannot see a campaign smaller than a hundred
-thousand comments.
+| Channel | Records per request | Sample in an hour | Finds campaigns down to | What it supports |
+|---|---:|---:|---:|---|
+| Index | 250 | 250,000 | **419** | duplicate titles, submission timing |
+| Detail | 1 | 1,000 | 104,889 | submitter name, city, state |
+| Text | 1 | 1,000 | 104,889 | near-duplicate comment bodies |
+
+*(FCC 17-108, 22.1M comments.)*
+
+**The cheap channel is cheap and thin.** Only duplicate titles and timing come
+at 250 records per request. Submitter name and geography — which do most of the
+separating in the signals below — come from the per-comment endpoint and cost
+exactly what a comment body costs.
+
+So text near-duplicate detection, which every published approach uses, is no
+worse than name or geography analysis. All three share a ceiling two orders of
+magnitude above what timing analysis can reach, and on the FCC docket none of
+them can see a campaign smaller than a hundred thousand comments.
 
 ### Which campaigns are worth hiding
 
