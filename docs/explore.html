@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Floodcheck — what can you prove about a docket you cannot read?</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#F7F5F0;--bone2:#F0ECE4;--navy:#131F2B;--navy2:#33404E;--muted:#6B7684;--rule:#DFD9CE;--brass:#8A6D3B;--red:#A8321E;
+--serif:"Newsreader",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bone:#0F1720;--bone2:#151F29;--navy:#EFEBE3;--navy2:#C3CBD4;--muted:#8A96A4;--rule:#26313D;--brass:#C9A867;--red:#E8705A}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bone);color:var(--navy);font:400 17px/1.65 var(--serif);-webkit-font-smoothing:antialiased}
+.wrap{max-width:58rem;margin:0 auto;padding:clamp(1.5rem,5vw,3.5rem)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,4.5vw,2.7rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 1rem;max-width:20ch}
+.kicker{font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 1.4rem}
+.lede{color:var(--navy2);max-width:34rem;margin:0 0 2.5rem}
+.panel{border-top:1px solid var(--navy);padding-top:1.8rem;margin-bottom:2.6rem}
+h2{font-family:var(--serif);font-weight:500;font-size:1.3rem;margin:0 0 .5rem}
+.sub{color:var(--muted);font-size:.95rem;margin:0 0 1.8rem;max-width:34rem}
+label{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:1px;background:var(--rule);cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:var(--navy);border:0;cursor:pointer}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--navy);border:0;cursor:pointer}
+.row{display:grid;gap:1.8rem;margin-bottom:2rem}
+@media(min-width:42rem){.row{grid-template-columns:1fr 1fr}}
+.val{font-family:var(--mono);font-size:1.1rem;margin-top:.5rem}
+.scores{display:grid;gap:1.8rem;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));margin:1.8rem 0}
+.score{border-top:1px solid var(--navy);padding-top:.9rem}
+.score .n{font-family:var(--mono);font-size:clamp(1.4rem,3.4vw,1.9rem);letter-spacing:-.04em;line-height:1;margin:0 0 .5rem;color:var(--brass)}
+.score .n.bad{color:var(--red)}
+.score .l{font-family:var(--sans);font-size:.66rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0}
+.note{font-size:.93rem;color:var(--muted);max-width:36rem;padding-top:1.2rem;border-top:1px solid var(--rule)}
+.note b{color:var(--navy);font-weight:500}
+.bars{display:grid;gap:.9rem;margin:1.6rem 0}
+.bar{display:grid;grid-template-columns:7rem 1fr 5rem;gap:1rem;align-items:center;font-size:.9rem}
+.track{height:3px;background:var(--rule);position:relative}
+.fill{position:absolute;inset:0 auto 0 0;height:3px;background:var(--brass);transition:width .15s}
+.fill.alt{background:var(--navy)}
+.q{font-family:var(--mono);font-size:.85rem;text-align:right}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p class="kicker">Floodcheck · public comment integrity</p>
+<h1>What can you prove about a docket you cannot read?</h1>
+<p class="lede">Regulations.gov allows 1,000 requests an hour and comment text
+costs one request each. Reading a million-comment docket in full is forty days
+of continuous polling, so every claim about a docket's integrity is already a
+claim from a sample. These are the limits that follow.</p>
+
+<div class="panel">
+  <h2>What a budget can find at all</h2>
+  <p class="sub">A campaign is identifiable because its members resemble each
+  other, so detection needs at least two of them in the sample. This is a
+  ceiling: a perfect detector reaches it and every real one does worse.</p>
+  <div class="row">
+    <div><label for="docket">Docket size</label><input type="range" id="docket" min="4" max="7.35" step="0.05" value="6"><p class="val" id="docket-v">1,000,000</p></div>
+    <div><label for="hours">Hours of budget</label><input type="range" id="hours" min="1" max="40" step="1" value="1"><p class="val" id="hours-v">1</p></div>
+  </div>
+  <div class="bars" id="floors"></div>
+  <p class="note" id="floor-note"></p>
+</div>
+
+<div class="panel">
+  <h2>What each side spends</h2>
+  <p class="sub">Writing a comment is a token purchase and scales with money.
+  Checking one is a rate-limited request and scales with wall clock.</p>
+  <div class="row">
+    <div><label for="camp">Campaign size</label><input type="range" id="camp" min="1.3" max="6" step="0.05" value="3"><p class="val" id="camp-v">1,000</p></div>
+  </div>
+  <div class="scores">
+    <div class="score"><p class="n" id="atk">—</p><p class="l">Costs to create</p></div>
+    <div class="score"><p class="n bad" id="aud">—</p><p class="l">Costs to find</p></div>
+    <div class="score"><p class="n bad" id="ratio">—</p><p class="l">Audit $ per attack $</p></div>
+    <div class="score"><p class="n" id="hrs">—</p><p class="l">Hours of polling</p></div>
+  </div>
+  <p class="note" id="cost-note"></p>
+</div>
+
+<div class="panel">
+  <h2>The channel that does not sample</h2>
+  <p class="sub">The FCC fraud was found by contacting people and asking whether
+  they filed the comments bearing their names. Coverage is total rather than
+  sampled, so the response rate does not need to be high.</p>
+  <div class="row">
+    <div><label for="resp">Response rate</label><input type="range" id="resp" min="0.0005" max="0.05" step="0.0005" value="0.02"><p class="val" id="resp-v">2.00%</p></div>
+    <div><label for="contact">Share contactable</label><input type="range" id="contact" min="0.05" max="1" step="0.05" value="0.6"><p class="val" id="contact-v">60%</p></div>
+  </div>
+  <div class="scores">
+    <div class="score"><p class="n bad" id="s-det">—</p><p class="l">Sampling finds it</p></div>
+    <div class="score"><p class="n" id="n-det">—</p><p class="l">Notification finds it</p></div>
+    <div class="score"><p class="n" id="n-rep">—</p><p class="l">Expected reports</p></div>
+  </div>
+  <p class="note" id="attr-note"></p>
+</div>
+
+<p class="note" style="border:0;padding-top:0">Every figure is computed in the
+page from the same formulas as the Python. Costs are published list prices and
+the documented rate limit; the auditor's hourly rate is an estimate. No real
+docket has been examined — the collector exists, refuses to fabricate, and has
+never been given a key.</p>
+</div>
+
+<script>
+const lg = (n,k)=>{let t=0;for(let i=0;i<k;i++)t+=Math.log(n-i)-Math.log(i+1);return t};
+function detect(p,n,N,min=2){
+  if(p<=0||n<=0)return 0; if(p>=1)return n>=min?1:0;
+  if(N&&N>0){
+    const K=Math.max(1,Math.round(p*N)); n=Math.min(n,N);
+    let below=0;
+    for(let k=0;k<min;k++){
+      if(k>K||n-k>N-K||n-k<0)continue;
+      below+=Math.exp(lg(K,k)+lg(N-K,n-k)-lg(N,n));
+    }
+    return Math.max(0,Math.min(1,1-below));
+  }
+  let below=0,q=1-p;
+  for(let k=0;k<min;k++) below+=Math.exp(lg(n,k)+k*Math.log(p)+(n-k)*Math.log(q));
+  return Math.max(0,Math.min(1,1-below));
+}
+function floorFor(N,sample){
+  let lo=1,hi=N,best=null;
+  while(lo<=hi){const mid=Math.floor((lo+hi)/2);
+    if(detect(mid/N,Math.min(sample,N),N)>=0.95){best=mid;hi=mid-1}else lo=mid+1}
+  return best;
+}
+function needed(p,N,target=0.95){
+  let lo=2,hi=Math.min(5e6,N);
+  if(detect(p,hi,N)<target)return hi;
+  while(lo<hi){const mid=Math.floor((lo+hi)/2);
+    if(detect(p,mid,N)>=target)hi=mid;else lo=mid+1}
+  return lo;
+}
+const TOK=600, USD_M=3.0, RPH=1000, HR=75.0, NOTICE=0.0008;
+const fmt=n=>Math.round(n).toLocaleString();
+const pct=x=>(x*100).toFixed(1)+"%";
+const usd=x=>x>=1000?"$"+Math.round(x).toLocaleString():"$"+x.toFixed(2);
+
+function render(){
+  const N=Math.round(Math.pow(10,+document.getElementById("docket").value));
+  const H=+document.getElementById("hours").value;
+  document.getElementById("docket-v").textContent=fmt(N);
+  document.getElementById("hours-v").textContent=H;
+  const req=RPH*H;
+  const chans=[["Index (titles, timing)",250],["Detail (name, place)",1],["Text (comment body)",1]];
+  const floors=chans.map(([label,rpr])=>{
+    const s=Math.min(req*rpr,N); return {label,sample:s,floor:floorFor(N,s)};
+  });
+  const worst=Math.max(...floors.map(f=>f.floor||N));
+  document.getElementById("floors").innerHTML=floors.map(f=>
+    `<div class="bar"><span>${f.label.split(" ")[0]}</span>
+     <span class="track"><span class="fill${f.label[0]==='I'?'':' alt'}" style="width:${Math.max(2,(f.floor/worst)*100)}%"></span></span>
+     <span class="q">${fmt(f.floor)}</span></div>`).join("");
+  document.getElementById("floor-note").innerHTML=
+    `Only titles and timing come 250 to a request. <b>Name, geography and comment text all cost one request each</b>, so they share a ceiling ${fmt(floors[1].floor/floors[0].floor)}× higher than timing analysis.`;
+
+  const K=Math.round(Math.pow(10,+document.getElementById("camp").value));
+  document.getElementById("camp-v").textContent=fmt(K);
+  const atk=K*TOK/1e6*USD_M;
+  const need=needed(K/N,N);
+  const hrs=need/RPH, aud=hrs*HR;
+  document.getElementById("atk").textContent=usd(atk);
+  document.getElementById("aud").textContent=usd(aud);
+  document.getElementById("ratio").textContent=(aud/atk).toFixed(1);
+  document.getElementById("hrs").textContent=hrs.toFixed(1);
+  document.getElementById("cost-note").innerHTML= aud>atk
+    ? `Finding this campaign costs <b>${(aud/atk).toFixed(0)}×</b> what creating it did. The auditor's figure covers sampling enough to <b>see</b> it — not to confirm, investigate, or audit the rest of the docket, and there are thousands of dockets.`
+    : `Large enough that finding it is cheaper than creating it. <b>A flood that swamps a docket announces itself</b> — it is the campaigns sized to pass that the arithmetic cannot reach.`;
+
+  const r=+document.getElementById("resp").value, c=+document.getElementById("contact").value;
+  document.getElementById("resp-v").textContent=(r*100).toFixed(2)+"%";
+  document.getElementById("contact-v").textContent=Math.round(c*100)+"%";
+  const sDet=detect(K/N,RPH*8,N), nDet=1-Math.pow(1-c*r,K);
+  document.getElementById("s-det").textContent=pct(sDet);
+  document.getElementById("n-det").textContent=pct(nDet);
+  document.getElementById("n-rep").textContent=(K*c*r).toFixed(1);
+  document.getElementById("attr-note").innerHTML= nDet>sDet
+    ? `Notification wins here, and a careful adversary gains nothing: pacing and name diversity are properties of the record, and <b>this channel does not read the record — it asks the person</b>.`
+    : `Sampling is sufficient at this size. Both find a flood easily; the gap opens on the small campaigns.`;
+}
+["docket","hours","camp","resp","contact"].forEach(id=>
+  document.getElementById(id).addEventListener("input",render));
+render();
+</script>
+</body>
+</html>

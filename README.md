@@ -237,6 +237,16 @@ This is one mechanism's arithmetic, and a demonstration that the failure in the
 first three findings is a property of **sampling**, not of the problem. It is
 not a proposal.
 
+## Explore the limits
+
+**[Run it here](https://claude.ai/artifact/KgWMhM6Jxt7qNPpT4Q7LQF)** — move the
+docket size, the budget, the campaign size and the response rate, and watch the
+three findings move together.
+
+The arithmetic is ported to JavaScript and verified against the Python: the
+detection floors (419 and 104,889 on the FCC docket) and the required sample
+(4,734) match exactly.
+
 ## Keeping the claims honest
 
 Four modules were built in sequence, each producing numbers that went into this
