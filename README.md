@@ -237,6 +237,22 @@ This is one mechanism's arithmetic, and a demonstration that the failure in the
 first three findings is a property of **sampling**, not of the problem. It is
 not a proposal.
 
+## Keeping the claims honest
+
+Four modules were built in sequence, each producing numbers that went into this
+document. Nothing stops a later change from silently invalidating an earlier
+claim.
+
+`tests/test_consistency.py` recomputes every load-bearing figure and asserts
+the document still matches — tolerant on the last digit, strict on the claim.
+Three of its checks are structural rather than numeric:
+
+- **The cheap channel must not be claimed to carry names.** The README once
+  said metadata was 250× cheaper and let that cover every non-text signal.
+- **`against.md` must lead with the unanswerable objection**, not bury it.
+- **The fee result must stay marked as not a recommendation**, and the
+  notification result as not a proposal.
+
 ## Status
 
 Reachability verified first, as in every project here. The findings:
