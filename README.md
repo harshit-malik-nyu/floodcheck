@@ -185,6 +185,58 @@ That is a model of an economic effect and **not a policy recommendation**. A
 fee on public comment has obvious and serious costs to the people the process
 exists to serve, and nothing here weighs those.
 
+## The one channel that does not sample
+
+All three findings are about an auditor examining records, and they fail for
+the same structural reason: a sample scales badly against an adversary who
+scales well.
+
+**The FCC fraud was not found by a detector.** The New York Attorney General's
+office contacted people and asked whether they had filed the comments bearing
+their names. Hundreds of thousands said no.
+
+That is a different channel, and its properties are the inverse of sampling's.
+Coverage is total rather than sampled, because the check is performed by the
+one person who already knows the answer. Cost is linear and near zero per
+comment. And pacing, name diversity and geographic plausibility do not help an
+adversary at all, because the signal is not in the record.
+
+### One docket of 1,000,000
+
+Sampling gets a full eight-hour day of continuous polling. Notification pays to
+notify every contactable comment on the whole docket.
+
+| Campaign | Sampling P(find) | Cost | Notification P(find) | Cost |
+|---:|---:|---:|---:|---:|
+| 20,000 | 100% | $600 | 100% | $480 |
+| 1,000 | 99.7% | $600 | 100% | $480 |
+| **200** | **47.6%** | $600 | **91.1%** | $480 |
+| **50** | **6.1%** | $600 | **45.3%** | $480 |
+
+### The required response rate falls as campaigns grow
+
+| Campaign | Response rate needed for 95% |
+|---:|---:|
+| 100,000 | 0.005% |
+| 10,000 | 0.050% |
+| 1,000 | 0.50% |
+| 200 | 2.48% |
+
+One person in two hundred bothering to report a notice they did not expect
+catches a thousand-comment campaign. **That is the opposite shape to sampling**,
+where a smaller campaign is harder at any budget.
+
+### What this is not
+
+Regulations.gov accepts anonymous comments and **does not verify email**, so
+contactability today is far below the 60% modelled. Notification might suppress
+legitimate commenting. And an attacker would move to identities with no contact
+path, which is the obvious response and is not priced here.
+
+This is one mechanism's arithmetic, and a demonstration that the failure in the
+first three findings is a property of **sampling**, not of the problem. It is
+not a proposal.
+
 ## Status
 
 Reachability verified first, as in every project here. The findings:
