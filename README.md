@@ -120,6 +120,62 @@ bloc without being conspicuous, submitted at a human pace from a plausible
 name list, is invisible to both the sampling budget and the signals — and it is
 the one that would actually change what an agency concludes.
 
+## The gap is economic, not technical
+
+The first two findings are capability statements, and a capability gap can in
+principle be closed by trying harder. This one cannot.
+
+**Writing a comment is a token purchase.** A few hundred plausible words costs
+a fraction of a cent, the work is embarrassingly parallel, and no human is
+needed.
+
+**Checking a comment is a request against a rate-limited API.** One per comment
+body, a thousand an hour, no bulk download, and no prospect of a higher limit.
+The auditor's constraint is wall clock, and wall clock does not parallelise.
+
+The attacker buys comments with money, which scales. The auditor buys scrutiny
+with time, which does not.
+
+### One campaign on a one-million-comment docket
+
+| Campaign | Costs to create | Costs to find | Audit dollars per attack dollar |
+|---:|---:|---:|---:|
+| 1,000,000 | $1,800.00 | $0.15 | 0.0 |
+| 100,000 | $180.00 | $3.45 | 0.0 |
+| 20,000 | $36.00 | $17.70 | 0.5 |
+| 5,000 | $9.00 | $71.02 | **7.9** |
+| 1,000 | $1.80 | $355.05 | **197** |
+| **200** | **$0.36** | **$1,762.28** | **4,895** |
+
+### Where the line sits
+
+| Docket | Campaigns below this cost more to find than to create |
+|---|---:|
+| 10,000 | 1,376 |
+| 100,000 | 4,417 |
+| 1,000,000 | **14,039** |
+| FCC 17-108 (22.1M) | **66,138** |
+
+**And the auditor's figure is a floor** — it covers sampling enough to *see*
+the campaign, not to confirm it, investigate it, or audit the rest of the
+docket. It is also per docket, and there are thousands. The attacker picks one.
+
+### The three findings compound
+
+Small campaigns are invisible to sampling. They survive the metadata signals if
+paced with any care. And they are where the cost ratio is most brutal — a
+200-comment campaign costs 36 cents to create and nearly $1,800 of audit time
+to find.
+
+The one lever that changes the slope is a cost on the side that scales. A
+**one-cent** submission fee moves the ratio by an order of magnitude, because
+the attacker's advantage rests entirely on writing being nearly free; a faster
+API helps the auditor linearly and leaves the ratio untouched.
+
+That is a model of an economic effect and **not a policy recommendation**. A
+fee on public comment has obvious and serious costs to the people the process
+exists to serve, and nothing here weighs those.
+
 ## Status
 
 Reachability verified first, as in every project here. The findings:

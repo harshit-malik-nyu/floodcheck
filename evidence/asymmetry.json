@@ -1,0 +1,110 @@
+{
+  "campaigns": [
+    {
+      "campaign_size": 1000000,
+      "docket_size": 1000000,
+      "attacker_usd": 1800.0,
+      "auditor_usd": 0.15,
+      "auditor_hours": 0.0,
+      "sample_needed": 2,
+      "detectable_within_a_week": true,
+      "audit_dollars_per_attack_dollar": 0.0
+    },
+    {
+      "campaign_size": 100000,
+      "docket_size": 1000000,
+      "attacker_usd": 180.0,
+      "auditor_usd": 3.45,
+      "auditor_hours": 0.0,
+      "sample_needed": 46,
+      "detectable_within_a_week": true,
+      "audit_dollars_per_attack_dollar": 0.0
+    },
+    {
+      "campaign_size": 20000,
+      "docket_size": 1000000,
+      "attacker_usd": 36.0,
+      "auditor_usd": 17.7,
+      "auditor_hours": 0.2,
+      "sample_needed": 236,
+      "detectable_within_a_week": true,
+      "audit_dollars_per_attack_dollar": 0.5
+    },
+    {
+      "campaign_size": 5000,
+      "docket_size": 1000000,
+      "attacker_usd": 9.0,
+      "auditor_usd": 71.02,
+      "auditor_hours": 0.9,
+      "sample_needed": 947,
+      "detectable_within_a_week": true,
+      "audit_dollars_per_attack_dollar": 7.9
+    },
+    {
+      "campaign_size": 1000,
+      "docket_size": 1000000,
+      "attacker_usd": 1.8,
+      "auditor_usd": 355.05,
+      "auditor_hours": 4.7,
+      "sample_needed": 4734,
+      "detectable_within_a_week": true,
+      "audit_dollars_per_attack_dollar": 197.3
+    },
+    {
+      "campaign_size": 200,
+      "docket_size": 1000000,
+      "attacker_usd": 0.36,
+      "auditor_usd": 1762.28,
+      "auditor_hours": 23.5,
+      "sample_needed": 23497,
+      "detectable_within_a_week": true,
+      "audit_dollars_per_attack_dollar": 4895.2
+    }
+  ],
+  "fees": [
+    {
+      "fee_usd": 0.0,
+      "campaign_size": 20000,
+      "docket_size": 1000000,
+      "attacker_usd": 36.0,
+      "auditor_usd": 17.7,
+      "auditor_hours": 0.2,
+      "sample_needed": 236,
+      "detectable_within_a_week": true,
+      "audit_dollars_per_attack_dollar": 0.5
+    },
+    {
+      "fee_usd": 0.01,
+      "campaign_size": 20000,
+      "docket_size": 1000000,
+      "attacker_usd": 236.0,
+      "auditor_usd": 17.7,
+      "auditor_hours": 0.2,
+      "sample_needed": 236,
+      "detectable_within_a_week": true,
+      "audit_dollars_per_attack_dollar": 0.1
+    },
+    {
+      "fee_usd": 0.1,
+      "campaign_size": 20000,
+      "docket_size": 1000000,
+      "attacker_usd": 2036.0,
+      "auditor_usd": 17.7,
+      "auditor_hours": 0.2,
+      "sample_needed": 236,
+      "detectable_within_a_week": true,
+      "audit_dollars_per_attack_dollar": 0.0
+    },
+    {
+      "fee_usd": 1.0,
+      "campaign_size": 20000,
+      "docket_size": 1000000,
+      "attacker_usd": 20036.0,
+      "auditor_usd": 17.7,
+      "auditor_hours": 0.2,
+      "sample_needed": 236,
+      "detectable_within_a_week": true,
+      "audit_dollars_per_attack_dollar": 0.0
+    }
+  ]
+}
