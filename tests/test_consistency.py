@@ -22,7 +22,7 @@ from pathlib import Path
 
 import pytest
 
-from floodcheck.attribution import Notification, break_even_response_rate, compare
+from floodcheck.attribution import break_even_response_rate, compare
 from floodcheck.economics import asymmetry, crossover
 from floodcheck.sampling import Budget, detect_probability, detection_floor
 
