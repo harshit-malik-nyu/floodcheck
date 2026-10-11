@@ -1,5 +1,7 @@
 # What can you prove about a docket you cannot read?
 
+**Decision study:** [Executive recommendation](analysis/output/decision_lab/executive-summary.md) · [Cost, cohort and experiment methods](analysis/README.md#decision-laboratory). Behavioral results are synthetic QA; economics are explicit planning assumptions.
+
 > **Validation update (2026-10-10):** Ceilings assume uniform sampling and a two-member detector. Faster APIs reduce the audit-to-attack cost ratio. Synthetic signals are not real-docket findings. See the [current decision brief](docs/decision-brief.md) and [reproducible analysis](analysis/README.md). Historical evidence and figures retain their original run context; this update supersedes conflicting claims below.
 
 

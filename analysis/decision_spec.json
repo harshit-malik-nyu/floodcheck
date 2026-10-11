@@ -1,0 +1,127 @@
+{
+  "project": "floodcheck",
+  "title": "Allocate audit effort without mistaking repetition for coordination",
+  "decision_owner": "Public-comment audit lead",
+  "observed_evidence": "The frozen signal-separation fixtures are synthetic. Duplicate text is not proof of coordination, and the detection ceiling assumes a specific uniform sample and two-member detector.",
+  "executive_recommendation": "Fund contextual follow-up rather than a duplicate-text enforcement rule. Report what the sampling design can and cannot detect at the available audit budget.",
+  "priorities": [
+    "Prespecify the sampling frame and missing-metadata treatment.",
+    "Separate benign organized participation from evidence of deceptive coordination.",
+    "Compare contextual review coverage per analyst hour before expanding collection."
+  ],
+  "reversal": "If contextual follow-up cannot keep false accusations below the gate, report insufficient evidence instead of labeling a campaign.",
+  "uncertainty": "No real-docket performance is established. Harm from false accusation is a hard gate, not monetized as a routine operating expense.",
+  "economics": {
+    "evidence_status": "ILLUSTRATIVE ASSUMPTIONS, NOT MEASURED COSTS OR RISK",
+    "period": "one planning year",
+    "volume": 80,
+    "review_capacity_hours": 1000,
+    "loss_per_incident_usd": 0,
+    "max_incident_rate": 0.015,
+    "options": [
+      {
+        "name": "Uniform sample and contextual review",
+        "fixed_usd": 0,
+        "incident_rate": 0.01,
+        "activities": [
+          {
+            "name": "Sample review",
+            "unit": "reviewer_hour",
+            "units_per_case": 10.0,
+            "usd_per_unit": 70,
+            "cash": false
+          },
+          {
+            "name": "Record retrieval",
+            "unit": "record",
+            "units_per_case": 300,
+            "usd_per_unit": 0.003,
+            "cash": true
+          }
+        ]
+      },
+      {
+        "name": "Metadata triage plus contextual follow-up",
+        "fixed_usd": 10000,
+        "incident_rate": 0.012,
+        "activities": [
+          {
+            "name": "Metadata and follow-up review",
+            "unit": "reviewer_hour",
+            "units_per_case": 6.0,
+            "usd_per_unit": 70,
+            "cash": false
+          },
+          {
+            "name": "Record retrieval",
+            "unit": "record",
+            "units_per_case": 1000,
+            "usd_per_unit": 0.003,
+            "cash": true
+          }
+        ]
+      },
+      {
+        "name": "Duplicate-text flags without context",
+        "fixed_usd": 2000,
+        "incident_rate": 0.12,
+        "activities": [
+          {
+            "name": "Flag handling",
+            "unit": "reviewer_hour",
+            "units_per_case": 1.0,
+            "usd_per_unit": 70,
+            "cash": false
+          },
+          {
+            "name": "Record retrieval",
+            "unit": "record",
+            "units_per_case": 1000,
+            "usd_per_unit": 0.003,
+            "cash": true
+          }
+        ]
+      }
+    ]
+  },
+  "product": {
+    "seed": 739,
+    "randomization_unit": "auditor account; randomize docket/team clusters in deployment",
+    "stages": [
+      "docket_opened",
+      "sample_review_completed",
+      "qualified_audit_saved"
+    ],
+    "incident_definition": "benign participation incorrectly accused",
+    "retention_interpretation": "auditor handles another eligible docket",
+    "observation_day": 56,
+    "minimum_activation_lift": 0.02,
+    "maximum_incident_increase": 0.005,
+    "planning_baseline": 0.45,
+    "minimum_detectable_effect": 0.05,
+    "segments": [
+      {
+        "name": "metadata_complete",
+        "start_probability": 0.9,
+        "control_activation": 0.64,
+        "treatment_delta": 0.14,
+        "apply_probability": 0.88,
+        "control_incident": 0.004,
+        "treatment_incident": 0.004,
+        "return7": 0.55,
+        "return28": 0.35
+      },
+      {
+        "name": "metadata_sparse",
+        "start_probability": 0.8200000000000001,
+        "control_activation": 0.52,
+        "treatment_delta": -0.06,
+        "apply_probability": 0.8,
+        "control_incident": 0.01,
+        "treatment_incident": 0.064,
+        "return7": 0.43000000000000005,
+        "return28": 0.24999999999999997
+      }
+    ]
+  }
+}

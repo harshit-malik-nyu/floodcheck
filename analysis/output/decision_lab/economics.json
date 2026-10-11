@@ -1,0 +1,2599 @@
+{
+  "base_case": {
+    "cost_factor": 1.0,
+    "options": [
+      {
+        "capacity_gate_pass": true,
+        "cash_outlay_usd": 72.0,
+        "components": [
+          {
+            "activity": "Sample review",
+            "cash_outlay_usd": 0.0,
+            "economic_cost_usd": 56000.0,
+            "quantity": 800.0,
+            "unit": "reviewer_hour"
+          },
+          {
+            "activity": "Record retrieval",
+            "cash_outlay_usd": 72.0,
+            "economic_cost_usd": 72.0,
+            "quantity": 24000.0,
+            "unit": "record"
+          }
+        ],
+        "economic_cost_usd": 56072.0,
+        "expected_incidents": 0.8,
+        "feasible": true,
+        "option": "Uniform sample and contextual review",
+        "reviewer_hours": 800.0,
+        "risk_gate_pass": true,
+        "scenario_loss_usd": 0.0,
+        "volume": 80.0
+      },
+      {
+        "capacity_gate_pass": true,
+        "cash_outlay_usd": 10240.0,
+        "components": [
+          {
+            "activity": "Metadata and follow-up review",
+            "cash_outlay_usd": 0.0,
+            "economic_cost_usd": 33600.0,
+            "quantity": 480.0,
+            "unit": "reviewer_hour"
+          },
+          {
+            "activity": "Record retrieval",
+            "cash_outlay_usd": 240.0,
+            "economic_cost_usd": 240.0,
+            "quantity": 80000.0,
+            "unit": "record"
+          }
+        ],
+        "economic_cost_usd": 43840.0,
+        "expected_incidents": 0.96,
+        "feasible": true,
+        "option": "Metadata triage plus contextual follow-up",
+        "reviewer_hours": 480.0,
+        "risk_gate_pass": true,
+        "scenario_loss_usd": 0.0,
+        "volume": 80.0
+      },
+      {
+        "capacity_gate_pass": true,
+        "cash_outlay_usd": 2240.0,
+        "components": [
+          {
+            "activity": "Flag handling",
+            "cash_outlay_usd": 0.0,
+            "economic_cost_usd": 5600.0,
+            "quantity": 80.0,
+            "unit": "reviewer_hour"
+          },
+          {
+            "activity": "Record retrieval",
+            "cash_outlay_usd": 240.0,
+            "economic_cost_usd": 240.0,
+            "quantity": 80000.0,
+            "unit": "record"
+          }
+        ],
+        "economic_cost_usd": 7840.0,
+        "expected_incidents": 9.6,
+        "feasible": false,
+        "option": "Duplicate-text flags without context",
+        "reviewer_hours": 80.0,
+        "risk_gate_pass": false,
+        "scenario_loss_usd": 0.0,
+        "volume": 80.0
+      }
+    ],
+    "recommended_if_assumptions_hold": "Metadata triage plus contextual follow-up",
+    "risk_factor": 1.0,
+    "volume_factor": 1.0
+  },
+  "break_even": [
+    {
+      "additional_fixed_usd": 10000,
+      "minimum_integer_volume_to_break_even": 36,
+      "option": "Metadata triage plus contextual follow-up",
+      "qualification": "Positive unit advantage required; risk and capacity gates still apply.",
+      "relative_to": "Uniform sample and contextual review",
+      "unit_economic_advantage_usd": 277.9
+    },
+    {
+      "additional_fixed_usd": 2000,
+      "minimum_integer_volume_to_break_even": 4,
+      "option": "Duplicate-text flags without context",
+      "qualification": "Positive unit advantage required; risk and capacity gates still apply.",
+      "relative_to": "Uniform sample and contextual review",
+      "unit_economic_advantage_usd": 627.9
+    }
+  ],
+  "evidence_status": "ILLUSTRATIVE PLANNING ASSUMPTIONS; NOT OBSERVED ROI",
+  "scenarios": [
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 27.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 21000.0,
+              "quantity": 400.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 27.0,
+              "economic_cost_usd": 27.0,
+              "quantity": 12000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 21027.0,
+          "expected_incidents": 0.4,
+          "feasible": true,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 400.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10090.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 12600.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 90.0,
+              "economic_cost_usd": 90.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 22690.0,
+          "expected_incidents": 0.48,
+          "feasible": true,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 240.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2090.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 2100.0,
+              "quantity": 40.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 90.0,
+              "economic_cost_usd": 90.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 4190.0,
+          "expected_incidents": 4.8,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 40.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        }
+      ],
+      "recommended_if_assumptions_hold": "Uniform sample and contextual review",
+      "risk_factor": 1,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 27.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 21000.0,
+              "quantity": 400.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 27.0,
+              "economic_cost_usd": 27.0,
+              "quantity": 12000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 21027.0,
+          "expected_incidents": 0.8,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 400.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10090.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 12600.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 90.0,
+              "economic_cost_usd": 90.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 22690.0,
+          "expected_incidents": 0.96,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 240.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2090.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 2100.0,
+              "quantity": 40.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 90.0,
+              "economic_cost_usd": 90.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 4190.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 40.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 27.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 21000.0,
+              "quantity": 400.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 27.0,
+              "economic_cost_usd": 27.0,
+              "quantity": 12000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 21027.0,
+          "expected_incidents": 1.6,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 400.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10090.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 12600.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 90.0,
+              "economic_cost_usd": 90.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 22690.0,
+          "expected_incidents": 1.92,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 240.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2090.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 2100.0,
+              "quantity": 40.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 90.0,
+              "economic_cost_usd": 90.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 4190.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 40.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 36.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 28000.0,
+              "quantity": 400.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 36.0,
+              "economic_cost_usd": 36.0,
+              "quantity": 12000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 28036.0,
+          "expected_incidents": 0.4,
+          "feasible": true,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 400.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10120.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 16800.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 120.0,
+              "economic_cost_usd": 120.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 26920.0,
+          "expected_incidents": 0.48,
+          "feasible": true,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 240.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2120.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 2800.0,
+              "quantity": 40.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 120.0,
+              "economic_cost_usd": 120.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 4920.0,
+          "expected_incidents": 4.8,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 40.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        }
+      ],
+      "recommended_if_assumptions_hold": "Metadata triage plus contextual follow-up",
+      "risk_factor": 1,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 36.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 28000.0,
+              "quantity": 400.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 36.0,
+              "economic_cost_usd": 36.0,
+              "quantity": 12000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 28036.0,
+          "expected_incidents": 0.8,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 400.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10120.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 16800.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 120.0,
+              "economic_cost_usd": 120.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 26920.0,
+          "expected_incidents": 0.96,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 240.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2120.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 2800.0,
+              "quantity": 40.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 120.0,
+              "economic_cost_usd": 120.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 4920.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 40.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 36.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 28000.0,
+              "quantity": 400.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 36.0,
+              "economic_cost_usd": 36.0,
+              "quantity": 12000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 28036.0,
+          "expected_incidents": 1.6,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 400.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10120.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 16800.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 120.0,
+              "economic_cost_usd": 120.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 26920.0,
+          "expected_incidents": 1.92,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 240.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2120.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 2800.0,
+              "quantity": 40.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 120.0,
+              "economic_cost_usd": 120.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 4920.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 40.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 54.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 42000.0,
+              "quantity": 400.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 54.0,
+              "economic_cost_usd": 54.0,
+              "quantity": 12000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 42054.0,
+          "expected_incidents": 0.4,
+          "feasible": true,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 400.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10180.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 25200.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 35380.0,
+          "expected_incidents": 0.48,
+          "feasible": true,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 240.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2180.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 4200.0,
+              "quantity": 40.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 6380.0,
+          "expected_incidents": 4.8,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 40.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        }
+      ],
+      "recommended_if_assumptions_hold": "Metadata triage plus contextual follow-up",
+      "risk_factor": 1,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 54.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 42000.0,
+              "quantity": 400.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 54.0,
+              "economic_cost_usd": 54.0,
+              "quantity": 12000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 42054.0,
+          "expected_incidents": 0.8,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 400.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10180.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 25200.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 35380.0,
+          "expected_incidents": 0.96,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 240.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2180.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 4200.0,
+              "quantity": 40.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 6380.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 40.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 54.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 42000.0,
+              "quantity": 400.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 54.0,
+              "economic_cost_usd": 54.0,
+              "quantity": 12000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 42054.0,
+          "expected_incidents": 1.6,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 400.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10180.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 25200.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 35380.0,
+          "expected_incidents": 1.92,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 240.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2180.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 4200.0,
+              "quantity": 40.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 40000.0,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 6380.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 40.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 40.0
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 54.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 42000.0,
+              "quantity": 800.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 54.0,
+              "economic_cost_usd": 54.0,
+              "quantity": 24000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 42054.0,
+          "expected_incidents": 0.8,
+          "feasible": true,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 800.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10180.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 25200.0,
+              "quantity": 480.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 35380.0,
+          "expected_incidents": 0.96,
+          "feasible": true,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 480.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2180.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 4200.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 6380.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 80.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        }
+      ],
+      "recommended_if_assumptions_hold": "Metadata triage plus contextual follow-up",
+      "risk_factor": 1,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 54.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 42000.0,
+              "quantity": 800.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 54.0,
+              "economic_cost_usd": 54.0,
+              "quantity": 24000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 42054.0,
+          "expected_incidents": 1.6,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 800.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10180.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 25200.0,
+              "quantity": 480.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 35380.0,
+          "expected_incidents": 1.92,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 480.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2180.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 4200.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 6380.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 80.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 54.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 42000.0,
+              "quantity": 800.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 54.0,
+              "economic_cost_usd": 54.0,
+              "quantity": 24000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 42054.0,
+          "expected_incidents": 3.2,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 800.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10180.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 25200.0,
+              "quantity": 480.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 35380.0,
+          "expected_incidents": 3.84,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 480.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2180.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 4200.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 6380.0,
+          "expected_incidents": 38.4,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 80.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 72.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 56000.0,
+              "quantity": 800.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 72.0,
+              "economic_cost_usd": 72.0,
+              "quantity": 24000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 56072.0,
+          "expected_incidents": 0.8,
+          "feasible": true,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 800.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10240.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 33600.0,
+              "quantity": 480.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 240.0,
+              "economic_cost_usd": 240.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 43840.0,
+          "expected_incidents": 0.96,
+          "feasible": true,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 480.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2240.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 5600.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 240.0,
+              "economic_cost_usd": 240.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 7840.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 80.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        }
+      ],
+      "recommended_if_assumptions_hold": "Metadata triage plus contextual follow-up",
+      "risk_factor": 1,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 72.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 56000.0,
+              "quantity": 800.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 72.0,
+              "economic_cost_usd": 72.0,
+              "quantity": 24000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 56072.0,
+          "expected_incidents": 1.6,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 800.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10240.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 33600.0,
+              "quantity": 480.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 240.0,
+              "economic_cost_usd": 240.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 43840.0,
+          "expected_incidents": 1.92,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 480.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2240.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 5600.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 240.0,
+              "economic_cost_usd": 240.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 7840.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 80.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 72.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 56000.0,
+              "quantity": 800.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 72.0,
+              "economic_cost_usd": 72.0,
+              "quantity": 24000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 56072.0,
+          "expected_incidents": 3.2,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 800.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10240.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 33600.0,
+              "quantity": 480.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 240.0,
+              "economic_cost_usd": 240.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 43840.0,
+          "expected_incidents": 3.84,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 480.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2240.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 5600.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 240.0,
+              "economic_cost_usd": 240.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 7840.0,
+          "expected_incidents": 38.4,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 80.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 108.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 84000.0,
+              "quantity": 800.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 108.0,
+              "economic_cost_usd": 108.0,
+              "quantity": 24000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 84108.0,
+          "expected_incidents": 0.8,
+          "feasible": true,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 800.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10360.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 50400.0,
+              "quantity": 480.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 360.0,
+              "economic_cost_usd": 360.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 60760.0,
+          "expected_incidents": 0.96,
+          "feasible": true,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 480.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2360.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 8400.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 360.0,
+              "economic_cost_usd": 360.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 10760.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 80.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        }
+      ],
+      "recommended_if_assumptions_hold": "Metadata triage plus contextual follow-up",
+      "risk_factor": 1,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 108.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 84000.0,
+              "quantity": 800.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 108.0,
+              "economic_cost_usd": 108.0,
+              "quantity": 24000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 84108.0,
+          "expected_incidents": 1.6,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 800.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10360.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 50400.0,
+              "quantity": 480.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 360.0,
+              "economic_cost_usd": 360.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 60760.0,
+          "expected_incidents": 1.92,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 480.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2360.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 8400.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 360.0,
+              "economic_cost_usd": 360.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 10760.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 80.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 108.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 84000.0,
+              "quantity": 800.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 108.0,
+              "economic_cost_usd": 108.0,
+              "quantity": 24000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 84108.0,
+          "expected_incidents": 3.2,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 800.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10360.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 50400.0,
+              "quantity": 480.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 360.0,
+              "economic_cost_usd": 360.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 60760.0,
+          "expected_incidents": 3.84,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 480.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2360.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 8400.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 360.0,
+              "economic_cost_usd": 360.0,
+              "quantity": 80000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 10760.0,
+          "expected_incidents": 38.4,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 80.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 80
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 108.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 84000.0,
+              "quantity": 1600.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 108.0,
+              "economic_cost_usd": 108.0,
+              "quantity": 48000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 84108.0,
+          "expected_incidents": 1.6,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 1600.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10360.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 50400.0,
+              "quantity": 960.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 360.0,
+              "economic_cost_usd": 360.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 60760.0,
+          "expected_incidents": 1.92,
+          "feasible": true,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 960.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2360.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 8400.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 360.0,
+              "economic_cost_usd": 360.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 10760.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 160.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        }
+      ],
+      "recommended_if_assumptions_hold": "Metadata triage plus contextual follow-up",
+      "risk_factor": 1,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 108.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 84000.0,
+              "quantity": 1600.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 108.0,
+              "economic_cost_usd": 108.0,
+              "quantity": 48000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 84108.0,
+          "expected_incidents": 3.2,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 1600.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10360.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 50400.0,
+              "quantity": 960.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 360.0,
+              "economic_cost_usd": 360.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 60760.0,
+          "expected_incidents": 3.84,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 960.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2360.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 8400.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 360.0,
+              "economic_cost_usd": 360.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 10760.0,
+          "expected_incidents": 38.4,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 160.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 108.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 84000.0,
+              "quantity": 1600.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 108.0,
+              "economic_cost_usd": 108.0,
+              "quantity": 48000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 84108.0,
+          "expected_incidents": 6.4,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 1600.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10360.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 50400.0,
+              "quantity": 960.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 360.0,
+              "economic_cost_usd": 360.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 60760.0,
+          "expected_incidents": 7.68,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 960.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2360.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 8400.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 360.0,
+              "economic_cost_usd": 360.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 10760.0,
+          "expected_incidents": 76.8,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 160.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 144.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 112000.0,
+              "quantity": 1600.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 144.0,
+              "economic_cost_usd": 144.0,
+              "quantity": 48000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 112144.0,
+          "expected_incidents": 1.6,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 1600.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10480.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 67200.0,
+              "quantity": 960.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 480.0,
+              "economic_cost_usd": 480.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 77680.0,
+          "expected_incidents": 1.92,
+          "feasible": true,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 960.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2480.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 11200.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 480.0,
+              "economic_cost_usd": 480.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 13680.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 160.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        }
+      ],
+      "recommended_if_assumptions_hold": "Metadata triage plus contextual follow-up",
+      "risk_factor": 1,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 144.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 112000.0,
+              "quantity": 1600.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 144.0,
+              "economic_cost_usd": 144.0,
+              "quantity": 48000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 112144.0,
+          "expected_incidents": 3.2,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 1600.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10480.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 67200.0,
+              "quantity": 960.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 480.0,
+              "economic_cost_usd": 480.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 77680.0,
+          "expected_incidents": 3.84,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 960.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2480.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 11200.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 480.0,
+              "economic_cost_usd": 480.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 13680.0,
+          "expected_incidents": 38.4,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 160.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 144.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 112000.0,
+              "quantity": 1600.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 144.0,
+              "economic_cost_usd": 144.0,
+              "quantity": 48000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 112144.0,
+          "expected_incidents": 6.4,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 1600.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10480.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 67200.0,
+              "quantity": 960.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 480.0,
+              "economic_cost_usd": 480.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 77680.0,
+          "expected_incidents": 7.68,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 960.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2480.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 11200.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 480.0,
+              "economic_cost_usd": 480.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 13680.0,
+          "expected_incidents": 76.8,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 160.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 216.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 168000.0,
+              "quantity": 1600.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 216.0,
+              "economic_cost_usd": 216.0,
+              "quantity": 48000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 168216.0,
+          "expected_incidents": 1.6,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 1600.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10720.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 100800.0,
+              "quantity": 960.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 720.0,
+              "economic_cost_usd": 720.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 111520.0,
+          "expected_incidents": 1.92,
+          "feasible": true,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 960.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2720.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 16800.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 720.0,
+              "economic_cost_usd": 720.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 19520.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 160.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        }
+      ],
+      "recommended_if_assumptions_hold": "Metadata triage plus contextual follow-up",
+      "risk_factor": 1,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 216.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 168000.0,
+              "quantity": 1600.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 216.0,
+              "economic_cost_usd": 216.0,
+              "quantity": 48000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 168216.0,
+          "expected_incidents": 3.2,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 1600.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10720.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 100800.0,
+              "quantity": 960.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 720.0,
+              "economic_cost_usd": 720.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 111520.0,
+          "expected_incidents": 3.84,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 960.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2720.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 16800.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 720.0,
+              "economic_cost_usd": 720.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 19520.0,
+          "expected_incidents": 38.4,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 160.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 216.0,
+          "components": [
+            {
+              "activity": "Sample review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 168000.0,
+              "quantity": 1600.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 216.0,
+              "economic_cost_usd": 216.0,
+              "quantity": 48000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 168216.0,
+          "expected_incidents": 6.4,
+          "feasible": false,
+          "option": "Uniform sample and contextual review",
+          "reviewer_hours": 1600.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 10720.0,
+          "components": [
+            {
+              "activity": "Metadata and follow-up review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 100800.0,
+              "quantity": 960.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 720.0,
+              "economic_cost_usd": 720.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 111520.0,
+          "expected_incidents": 7.68,
+          "feasible": false,
+          "option": "Metadata triage plus contextual follow-up",
+          "reviewer_hours": 960.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 2720.0,
+          "components": [
+            {
+              "activity": "Flag handling",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 16800.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Record retrieval",
+              "cash_outlay_usd": 720.0,
+              "economic_cost_usd": 720.0,
+              "quantity": 160000,
+              "unit": "record"
+            }
+          ],
+          "economic_cost_usd": 19520.0,
+          "expected_incidents": 76.8,
+          "feasible": false,
+          "option": "Duplicate-text flags without context",
+          "reviewer_hours": 160.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 0.0,
+          "volume": 160
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 2
+    }
+  ]
+}

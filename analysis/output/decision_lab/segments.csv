@@ -1,0 +1,5 @@
+segment,arm,assigned,activated,activation_itt,incidents,incident_itt
+metadata_complete,control,640,321,0.5015625,2,0.003125
+metadata_complete,treatment,640,418,0.653125,2,0.003125
+metadata_sparse,control,640,216,0.3375,0,0.0
+metadata_sparse,treatment,640,206,0.321875,13,0.0203125
