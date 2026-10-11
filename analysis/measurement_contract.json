@@ -1,0 +1,23 @@
+{
+  "decision": "Allocate a limited review budget to suspicious comment patterns without accusing legitimate participants.",
+  "primary_outcome": "Adjudicated coordinated clusters discovered at a fixed review budget, alongside false flags on legitimate clusters.",
+  "denominator": "All eligible docket comments for coverage, all reviewed clusters for precision; unsampled cases are not negatives.",
+  "independence_unit": "Coordination cluster or docket; repeated messages from one cluster are dependent.",
+  "quality_guardrail": "False accusations, protected legitimate participation and reviewer-hour budget.",
+  "minimum_data": "Docket/comment IDs, sampling probabilities, cluster mapping, flag reason, independent adjudication and review effort.",
+  "failure_handling": "Unreviewed comments retain unknown labels. Sampling-weighted population estimates require known inclusion probabilities and appropriate uncertainty.",
+  "release_rule": "Use the detection ceiling only under its uniform-sampling and two-member-detection assumptions. Synthetic fixtures cannot authorize real enforcement.",
+  "reversal": "Context review shows duplicates are legitimate, or the sampling design no longer matches the stated detection assumptions.",
+  "project": "floodcheck",
+  "status": "PROPOSED MEASUREMENT CONTRACT; NOT AN EXECUTED DOMAIN EXPERIMENT",
+  "defense": [
+    [
+      "Are duplicate comments coordinated fraud?",
+      "No. Duplication is a review signal and can reflect legitimate participation. The decision needs context and adjudication."
+    ],
+    [
+      "Why not report recall from reviewed comments?",
+      "The reviewed set is selected. Without labels or a defensible sampling design for the rest, population recall is unidentified."
+    ]
+  ]
+}

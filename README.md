@@ -284,3 +284,7 @@ sandbox, and the key is passed as a workflow input so it is never committed.
 ## License
 
 MIT. Comment data is US federal public record.
+
+## Decision robustness and domain measurement
+
+The [decision-assurance review](analysis/output/assurance/decision-assurance.md) reports feasibility across stressed assumptions, conditional cost regret, missing-outcome identification bounds, cluster-budget sensitivity, and a project-specific domain measurement contract. Domain quality is separate from synthetic activation. An unmeasured required quality gate means HOLD.
