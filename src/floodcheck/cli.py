@@ -26,13 +26,16 @@ def cmd_ceiling(args) -> int:
         print(json.dumps(f, indent=2))
         return 0
     print(f"docket of {args.docket:,}, {args.hours} hour(s) of budget\n")
-    for ch in ("metadata", "text"):
+    for ch in ("index", "detail", "text"):
         d = f[ch]
+        if d['smallest_detectable_campaign'] is None:
+            print(f"  {ch:9s} sample {d['sample']:>9,}: no campaign meets the detection target")
+            continue
         print(f"  {ch:9s} sample {d['sample']:>9,}  finds campaigns down to "
               f"{d['smallest_detectable_campaign']:>9,} "
               f"({d['as_share_of_docket']:.4%})")
     print("\n  A perfect detector needs two members of a campaign in its sample.")
-    print("  These are ceilings; every real detector does worse.")
+    print("  Conditional ceiling for uniform sampling and the two-member model.")
     return 0
 
 
@@ -62,7 +65,8 @@ def cmd_signals(args) -> int:
             a = assess(b["timestamps"], b["names"], b["states"])
             scores.append(a.score)
             rows.append({"provenance": name, "seed": seed, **a.as_dict()})
-        print(f"  {name:12s} flags across {args.seeds} seeds: {scores}")
+        if not args.json:
+            print(f"  {name:12s} flags across {args.seeds} seeds: {scores}")
     if args.json:
         print(json.dumps(rows, indent=2))
         return 0
@@ -95,6 +99,12 @@ def main(argv: list[str] | None = None) -> int:
     p.set_defaults(func=cmd_signals)
 
     args = ap.parse_args(argv)
+    for name in ("docket", "hours", "campaign", "size", "seeds"):
+        value = getattr(args, name, None)
+        if value is not None and (not __import__('math').isfinite(value) or value <= 0):
+            ap.error(f"--{name} must be finite and positive")
+    if hasattr(args, 'campaign') and args.campaign > args.docket:
+        ap.error("--campaign cannot exceed --docket")
     return args.func(args)
 
 

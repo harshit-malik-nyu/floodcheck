@@ -209,10 +209,12 @@ def detection_floor(population: int, budget: Budget,
                 hi = mid - 1
             else:
                 lo = mid + 1
+        supports = CHANNELS[channel]["supports"]
+        assert isinstance(supports, (tuple, list))
         out[channel] = {
             "sample": n,
             "records_per_request": rpr,
-            "supports": list(CHANNELS[channel]["supports"]),
+            "supports": list(supports),
             "smallest_detectable_campaign": best,
             "as_share_of_docket": (best / population) if best else None,
         }

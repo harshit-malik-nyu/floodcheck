@@ -140,8 +140,7 @@ def crossover(docket_size: int, prices: Prices | None = None,
     """
     The campaign size at which auditing costs more than attacking.
 
-    Below it the defender is ahead; above it every additional comment widens
-    the gap. Found by bisection on the ratio, which is monotone in campaign
+    Below it finding costs more than creation; above it the ratio falls. Found by bisection on the ratio, which is monotone in campaign
     size because the attacker's cost is linear while the auditor's falls as
     the campaign becomes easier to find.
     """
@@ -174,8 +173,8 @@ def submission_fee_effect(campaign_size: int, docket_size: int,
 
     The attacker's advantage comes from writing being nearly free. A fee
     changes the slope on the side that scales, and it is the only lever in
-    this model that does — a faster API helps the auditor linearly while the
-    attacker's cost stays linear too, so the ratio is unchanged.
+    this model that does — a faster API decreases audit time and the audit/attack cost ratio
+    in inverse proportion to throughput, holding other inputs fixed.
 
     This is a model of an economic effect, not a policy recommendation. A fee
     on public comment has obvious and serious costs to the people the process

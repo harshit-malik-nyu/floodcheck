@@ -1,0 +1,4 @@
+provenance,runs,mean_flags,min_flags,max_flags
+careful,5,0.2,0,1
+membership,5,0.2,0,1
+scripted,5,3.0,3,3

@@ -1,0 +1,19 @@
+{
+  "external_services_required": false,
+  "input_sha256": {
+    "evidence/signal_separation.json": "29fa7e318ffa880fcd4bdb1d13a1099e72748170c30910a6cbcd649fb2a7ab9f"
+  },
+  "outputs": {
+    "query_1.csv": "93e0d2c0c7853e3cde4a2eb87291d1d39eee5384f803269ef6f3d0eb05e47c7c",
+    "query_2.csv": "991840af046f9b5b12bbe1ca7713114d32f4a3b286bd2ee23075c321b19de989"
+  },
+  "project": "floodcheck",
+  "quality_checks": [
+    "SQL type and domain constraints",
+    "row-count reconciliation",
+    "SQLite integrity"
+  ],
+  "query_sha256": "a78ac090f7dd9a2f246cd250ff345ca50205b24fd50ccf935d18b818e56d229f",
+  "rows": 15,
+  "scope": "Synthetic signal-separation fixtures, not a real public-comment docket. Flags do not establish coordination."
+}

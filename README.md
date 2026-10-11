@@ -1,5 +1,8 @@
 # What can you prove about a docket you cannot read?
 
+> **Validation update (2026-10-10):** Ceilings assume uniform sampling and a two-member detector. Faster APIs reduce the audit-to-attack cost ratio. Synthetic signals are not real-docket findings. See the [current decision brief](docs/decision-brief.md) and [reproducible analysis](analysis/README.md). Historical evidence and figures retain their original run context; this update supersedes conflicting claims below.
+
+
 A federal agency proposing a rule must consider the public comments it
 receives. In 2017 the FCC's net neutrality docket received **22.1 million**
 comments; the New York Attorney General later found roughly **18 million were
@@ -179,7 +182,7 @@ to find.
 The one lever that changes the slope is a cost on the side that scales. A
 **one-cent** submission fee moves the ratio by an order of magnitude, because
 the attacker's advantage rests entirely on writing being nearly free; a faster
-API helps the auditor linearly and leaves the ratio untouched.
+API reduces audit cost and the audit-to-attack cost ratio proportionally. A tenfold speed increase reduces that ratio tenfold, holding other inputs fixed.
 
 That is a model of an economic effect and **not a policy recommendation**. A
 fee on public comment has obvious and serious costs to the people the process
